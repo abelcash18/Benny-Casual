@@ -3,41 +3,74 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BennyCasual — Modern Casual Fashion</title>
+  <meta
+    name="description"
+    content="BennyCasual is a modern casual fashion label built around relaxed silhouettes, soft structure, and capsule-ready everyday pieces."
+  />
+  <title>BennyCasual | Modern Casual Fashion</title>
   <link rel="stylesheet" href="index.css" />
+  <script src="index.js" defer></script>
 </head>
 <body>
-  <div class="site-shell">
-    <nav class="nav" aria-label="Main navigation">
-      <a class="brand-mark" href="#top" aria-label="BennyCasual home"><span class="logo-cube" aria-hidden="true"></span>BennyCasual</a>
-      <div class="nav-links" aria-label="Page sections">
-        <a href="#collection">Collection</a>
-        <a href="#about">Brand</a>
-        <a href="#values">Fit</a>
-        <a href="#drop">Drop</a>
-      </div>
-      <a class="nav-cta" href="#drop">Shop the drop</a>
-    </nav>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
+  <div class="site-shell">
+    <header class="site-header">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand-mark" href="#top" aria-label="BennyCasual home">
+          <span class="logo-cube" aria-hidden="true"></span>
+          <span>BennyCasual</span>
+        </a>
+
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-nav">
+          <span class="menu-line" aria-hidden="true"></span>
+          <span class="sr-only">Menu</span>
+        </button>
+
+        <div class="nav-panel" id="primary-nav">
+          <div class="nav-links" aria-label="Page sections">
+            <a href="#collection">Collection</a>
+            <a href="#about">Brand</a>
+            <a href="#values">Fit</a>
+            <a href="#lookbook">Looks</a>
+            <a href="#drop">Drop</a>
+          </div>
+          <a class="nav-cta" href="#drop">Shop the drop</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <div class="eyebrow"><span class="pulse-dot"></span>New casual uniform · 2026 preview</div>
-          <h1 id="hero-title"><span>Street-soft</span> style for every day off.</h1>
-          <p class="lead">BennyCasual blends elevated basics, relaxed silhouettes, and tactile neutral layers for people who want comfort to look intentional.</p>
-          <div class="hero-actions">
-            <a class="button primary" href="#collection">Explore collection →</a>
+          <p class="eyebrow"><span class="pulse-dot" aria-hidden="true"></span>New casual uniform</p>
+          <h1 id="hero-title">Street-soft style for every day off.</h1>
+          <p class="lead">
+            Elevated basics, relaxed silhouettes, and tactile neutral layers for people who want comfort to look intentional.
+          </p>
+
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button primary" href="#collection">Explore collection</a>
             <a class="button secondary" href="#about">Meet the brand</a>
           </div>
-          <div class="hero-stats" aria-label="Brand highlights">
-            <div class="stat"><strong>24/7</strong><small>day-to-night comfort</small></div>
-            <div class="stat"><strong>3D</strong><small>layered digital lookbook</small></div>
-            <div class="stat"><strong>Core</strong><small>capsule-first styling</small></div>
-          </div>
+
+          <dl class="hero-stats" aria-label="Brand highlights">
+            <div class="stat">
+              <dt>24/7</dt>
+              <dd>day-to-night comfort</dd>
+            </div>
+            <div class="stat">
+              <dt>12</dt>
+              <dd>capsule-first pieces</dd>
+            </div>
+            <div class="stat">
+              <dt>Core</dt>
+              <dd>easy repeat styling</dd>
+            </div>
+          </dl>
         </div>
 
-        <div class="visual-stage" aria-label="3D inspired product visual">
-          <div class="orbit" aria-hidden="true"></div>
+        <div class="visual-stage" aria-label="Featured BennyCasual hoodie illustration">
           <div class="fashion-card">
             <div class="product-scene">
               <span class="floating-chip chip-one">soft structure</span>
@@ -48,102 +81,155 @@
                 <div class="sleeve right"></div>
                 <div class="torso"><div class="pocket"></div></div>
               </div>
-              <div class="label-tag"><strong>Cloudweight Hoodie</strong><small>3D placeholder garment · no stock imagery</small></div>
+              <div class="label-tag">
+                <strong>Cloudweight Hoodie</strong>
+                <small>Brushed fleece, boxy fit, warm neutral</small>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="collection" aria-labelledby="collection-title">
+      <section class="section" id="collection" aria-labelledby="collection-title">
         <div class="section-heading">
-          <h2 id="collection-title">Featured pieces with easy rotation.</h2>
-          <p>Original CSS-built product placeholders show the visual system without relying on third-party photography.</p>
+          <div>
+            <p class="section-kicker">Capsule pieces</p>
+            <h2 id="collection-title">Featured pieces with easy rotation.</h2>
+          </div>
+          <p>Three starting points for a sharper casual uniform: soft, practical, and simple to restyle.</p>
         </div>
+
         <div class="collection-grid">
-          <article class="item-card" style="--card-a:#ffe8d5;--card-b:#b87a4d;">
+          <article class="item-card hoodie-card">
             <div class="item-art"><div class="garment-icon" aria-hidden="true"></div></div>
-            <div class="item-meta"><div><h3>Cloudweight Hoodie</h3><p>Brushed inside, boxy outside, built for layering.</p></div><span class="price">$88</span></div>
+            <div class="item-meta">
+              <div>
+                <h3>Cloudweight Hoodie</h3>
+                <p>Brushed inside, boxy outside, built for layering.</p>
+              </div>
+              <span class="price">$88</span>
+            </div>
+            <button class="quick-add" type="button" data-product="Cloudweight Hoodie">Quick add</button>
           </article>
-          <article class="item-card" style="--card-a:#dcedff;--card-b:#5d7897;">
-            <div class="item-art"><div class="garment-icon" aria-hidden="true"></div></div>
-            <div class="item-meta"><div><h3>Commuter Overshirt</h3><p>A crisp top layer with low-key utility energy.</p></div><span class="price">$112</span></div>
+
+          <article class="item-card overshirt-card">
+            <div class="item-art"><div class="garment-icon overshirt" aria-hidden="true"></div></div>
+            <div class="item-meta">
+              <div>
+                <h3>Commuter Overshirt</h3>
+                <p>A crisp top layer with low-key utility energy.</p>
+              </div>
+              <span class="price">$112</span>
+            </div>
+            <button class="quick-add" type="button" data-product="Commuter Overshirt">Quick add</button>
           </article>
-          <article class="item-card" style="--card-a:#f2f4d6;--card-b:#838c47;">
-            <div class="item-art"><div class="garment-icon" aria-hidden="true"></div></div>
-            <div class="item-meta"><div><h3>Ease Cargo Trouser</h3><p>Roomy, tapered, and clean enough for dinner.</p></div><span class="price">$96</span></div>
+
+          <article class="item-card trouser-card">
+            <div class="item-art"><div class="garment-icon trouser" aria-hidden="true"></div></div>
+            <div class="item-meta">
+              <div>
+                <h3>Ease Cargo Trouser</h3>
+                <p>Roomy, tapered, and clean enough for dinner.</p>
+              </div>
+              <span class="price">$96</span>
+            </div>
+            <button class="quick-add" type="button" data-product="Ease Cargo Trouser">Quick add</button>
           </article>
         </div>
       </section>
 
-      <section id="about" aria-labelledby="about-title">
+      <section class="section" id="about" aria-labelledby="about-title">
         <div class="about-panel">
-          <div class="quote-card"><p>Casual should feel considered, not careless.</p><span>— BennyCasual brand principle</span></div>
+          <aside class="quote-card" aria-label="Brand principle">
+            <p>Casual should feel considered, not careless.</p>
+            <span>BennyCasual brand principle</span>
+          </aside>
+
           <div class="story-card">
-            <h2 id="about-title" style="margin:0 0 18px; font-size:clamp(2rem,4vw,3.6rem); line-height:.96; letter-spacing:-.07em;">Designed for the in-between moments.</h2>
-            <p>BennyCasual is a modern lifestyle label for coffee runs, creative workdays, weekend flights, and everything that happens between plans. The look is relaxed, but the details stay sharp: warmer neutrals, dimensional textures, and silhouettes that move.</p>
-            <p>This first website direction keeps the brand premium but approachable, mixing soft editorial copy with a 3D-inspired digital product stage.</p>
+            <p class="section-kicker">Brand point of view</p>
+            <h2 id="about-title">Designed for the in-between moments.</h2>
+            <p>
+              BennyCasual is a modern lifestyle label for coffee runs, creative workdays, weekend flights, and everything that happens between plans.
+            </p>
+            <p>
+              The look is relaxed, but the details stay sharp: warmer neutrals, dimensional textures, and silhouettes that move.
+            </p>
             <div class="pill-row" aria-label="Brand descriptors">
-              <span class="pill">relaxed tailoring</span><span class="pill">neutral layers</span><span class="pill">soft structure</span><span class="pill">capsule ready</span>
+              <span class="pill">relaxed tailoring</span>
+              <span class="pill">neutral layers</span>
+              <span class="pill">soft structure</span>
+              <span class="pill">capsule ready</span>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="values" aria-labelledby="values-title">
+      <section class="section" id="values" aria-labelledby="values-title">
         <div class="section-heading">
-          <h2 id="values-title">Clean pieces. Smarter details.</h2>
+          <div>
+            <p class="section-kicker">Daily fit system</p>
+            <h2 id="values-title">Clean pieces. Smarter details.</h2>
+          </div>
           <p>Four core promises make BennyCasual feel refined while staying effortless.</p>
         </div>
+
         <div class="values-grid">
-          <article class="value-card"><div class="value-icon">01</div><h3>Easy fit</h3><p>Relaxed cuts that keep their shape without feeling stiff.</p></article>
-          <article class="value-card"><div class="value-icon">02</div><h3>Layer depth</h3><p>Textured basics designed to stack, style, and repeat.</p></article>
-          <article class="value-card"><div class="value-icon">03</div><h3>Soft palette</h3><p>Warm neutrals with occasional high-energy accent color.</p></article>
-          <article class="value-card"><div class="value-icon">04</div><h3>Daily polish</h3><p>Comfort-first clothing that still reads intentional.</p></article>
+          <article class="value-card"><span>01</span><h3>Easy fit</h3><p>Relaxed cuts that keep their shape without feeling stiff.</p></article>
+          <article class="value-card"><span>02</span><h3>Layer depth</h3><p>Textured basics designed to stack, style, and repeat.</p></article>
+          <article class="value-card"><span>03</span><h3>Soft palette</h3><p>Warm neutrals with a few bright accent moments.</p></article>
+          <article class="value-card"><span>04</span><h3>Daily polish</h3><p>Comfort-first clothing that still reads intentional.</p></article>
         </div>
       </section>
 
-      <section aria-labelledby="lookbook-title">
+      <section class="section" id="lookbook" aria-labelledby="lookbook-title">
         <div class="section-heading">
-          <h2 id="lookbook-title">Lookbook rhythm.</h2>
-          <p>A moving strip creates editorial energy while keeping the page lightweight.</p>
-        </div>
-        <div class="lookbook-strip" aria-label="Style ideas ticker">
-          <div class="ticker">
-            <div class="look"><div class="swatch" style="--a:#f4d4b1;--b:#7e5337;"></div><div><strong>Latte layers</strong><small>hoodie · overshirt · cargos</small></div></div>
-            <div class="look"><div class="swatch" style="--a:#1f1c1a;--b:#d7ff65;"></div><div><strong>Night coffee</strong><small>black tee · easy trouser</small></div></div>
-            <div class="look"><div class="swatch" style="--a:#dcecff;--b:#5b7692;"></div><div><strong>Blue commute</strong><small>overshirt · relaxed denim</small></div></div>
-            <div class="look"><div class="swatch" style="--a:#fff2d9;--b:#ffb6a4;"></div><div><strong>Sunday set</strong><small>crewneck · soft shorts</small></div></div>
-            <div class="look"><div class="swatch" style="--a:#f4d4b1;--b:#7e5337;"></div><div><strong>Latte layers</strong><small>hoodie · overshirt · cargos</small></div></div>
-            <div class="look"><div class="swatch" style="--a:#1f1c1a;--b:#d7ff65;"></div><div><strong>Night coffee</strong><small>black tee · easy trouser</small></div></div>
-            <div class="look"><div class="swatch" style="--a:#dcecff;--b:#5b7692;"></div><div><strong>Blue commute</strong><small>overshirt · relaxed denim</small></div></div>
-            <div class="look"><div class="swatch" style="--a:#fff2d9;--b:#ffb6a4;"></div><div><strong>Sunday set</strong><small>crewneck · soft shorts</small></div></div>
+          <div>
+            <p class="section-kicker">Lookbook rhythm</p>
+            <h2 id="lookbook-title">Four easy outfit directions.</h2>
           </div>
+          <p>Color stories for repeatable styling, from quiet mornings to late plans.</p>
+        </div>
+
+        <div class="lookbook-strip" aria-label="Style ideas">
+          <article class="look"><div class="swatch latte"></div><div><h3>Latte layers</h3><p>hoodie / overshirt / cargos</p></div></article>
+          <article class="look"><div class="swatch night"></div><div><h3>Night coffee</h3><p>black tee / easy trouser</p></div></article>
+          <article class="look"><div class="swatch blue"></div><div><h3>Blue commute</h3><p>overshirt / relaxed denim</p></div></article>
+          <article class="look"><div class="swatch sunday"></div><div><h3>Sunday set</h3><p>crewneck / soft shorts</p></div></article>
         </div>
       </section>
 
-      <section id="drop" aria-labelledby="drop-title">
+      <section class="section" id="drop" aria-labelledby="drop-title">
         <div class="cta-panel">
           <div>
-            <h2 id="drop-title">Get first access to the BennyCasual drop.</h2>
-            <p>Join the list for capsule updates, early color previews, and styling notes. This demo uses a non-submitting signup UI so the static site stays review-safe.</p>
+            <p class="section-kicker">First access</p>
+            <h2 id="drop-title">Get the BennyCasual drop note.</h2>
+            <p>Join the list for capsule updates, early color previews, and styling notes.</p>
           </div>
-          <div class="newsletter" aria-label="Newsletter signup preview">
+
+          <form class="newsletter" novalidate>
+            <label for="email">Email address</label>
             <div class="input-row">
-              <input type="email" value="hello@bennycasual.com" aria-label="Email address preview" readonly />
-              <button type="button">Notify me</button>
+              <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required />
+              <button type="submit">Notify me</button>
             </div>
-            <small>Preview interaction only · ready to connect to a real email platform later.</small>
-          </div>
+            <p class="form-message" role="status" aria-live="polite"></p>
+          </form>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <div>© 2026 BennyCasual. Built for clean casual style.</div>
-      <div class="footer-links"><a href="#collection">Collection</a><a href="#about">Brand</a><a href="#drop">Contact</a></div>
+      <p>&copy; 2026 BennyCasual. Built for clean casual style.</p>
+      <div class="footer-links" aria-label="Footer navigation">
+        <a href="#collection">Collection</a>
+        <a href="#about">Brand</a>
+        <a href="#drop">Contact</a>
+      </div>
     </footer>
   </div>
 
- srcipt src="index.js"></script>
+  <div class="toast" role="status" aria-live="polite"></div>
+
+  <script src="index.js"></script>
 </body>
 </html>
